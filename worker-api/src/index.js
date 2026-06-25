@@ -5,7 +5,10 @@ const PASSWORD_KEYLEN = 32;
 export default {
   async fetch(request, env) {
     if (request.method === 'OPTIONS') {
-      return jsonResponse(204, {});
+      return new Response(null, {
+        status: 204,
+        headers: corsHeaders(),
+      });
     }
 
     const url = new URL(request.url);
@@ -40,11 +43,17 @@ function jsonResponse(status, data) {
     status,
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      ...corsHeaders(),
     },
   });
+}
+
+function corsHeaders() {
+  return {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  };
 }
 
 async function parseBody(request) {
