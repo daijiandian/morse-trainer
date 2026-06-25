@@ -2,7 +2,7 @@
 
 const TOKEN_SECRET = process.env.AUTH_TOKEN_SECRET || 'morse-trainer-dev-secret';
 const TOKEN_TTL_MS = 7 * 24 * 60 * 60 * 1000;
-const PASSWORD_ITERATIONS = 120000;
+const PASSWORD_ITERATIONS = 100000;
 const PASSWORD_KEYLEN = 32;
 const PASSWORD_DIGEST = 'sha256';
 
