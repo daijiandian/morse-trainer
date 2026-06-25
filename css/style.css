@@ -312,6 +312,11 @@ body::before {
 .sync-actions { display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap; }
 .sync-user { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 0.6rem; }
 .sync-msg { min-height: 1.2em; }
+.language-label {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--text-soft);
+}
 .btn-small {
   min-height: 44px;
   padding: 0.68rem 1.2rem;
@@ -324,9 +329,15 @@ body::before {
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
   color: #f8fafc;
   min-height: 44px;
+  padding-left: 0.95rem;
   padding-right: 2rem;
+  appearance: none;
+  -webkit-appearance: none;
+  color-scheme: dark;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 #language-select option {
@@ -1599,9 +1610,130 @@ body::before {
 
 
 .hero-topbar {
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
 
+.tutorial-page {
+  min-height: 100vh;
+}
+
+.tutorial-screen {
+  max-width: 1160px;
+}
+
+.tutorial-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.tutorial-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.tutorial-toolbar-lang {
+  margin-left: auto;
+}
+
+.tutorial-toolbar .btn {
+  min-width: 156px;
+  justify-content: center;
+}
+
+.tutorial-toolbar #language-select {
+  min-width: 148px;
+}
+
+.tutorial-page .plan-header {
+  background:
+    radial-gradient(circle at top right, rgba(245, 185, 66, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.03), transparent),
+    var(--bg-card-strong);
+}
+
+.tutorial-page .plan-header h1 {
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  margin-bottom: 0.65rem;
+}
+
+.tutorial-page .plan-summary {
+  max-width: 860px;
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
+.tutorial-article-section {
+  padding: 1.35rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.025), transparent 18%),
+    rgba(12, 18, 31, 0.9);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.tutorial-article-section > p,
+.tutorial-article-block p {
+  margin-bottom: 1rem;
+  color: var(--text-soft);
+  line-height: 1.88;
+  font-size: 0.97rem;
+}
+
+.tutorial-article-section > p:last-child,
+.tutorial-article-block p:last-child {
+  margin-bottom: 0;
+}
+
+.tutorial-article-block + .tutorial-article-block {
+  margin-top: 1.45rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tutorial-article-block h3 {
+  margin-bottom: 0.8rem;
+}
+
+.tutorial-page .plan-section h2 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .tutorial-toolbar {
+    align-items: stretch;
+  }
+
+  .tutorial-toolbar-group,
+  .tutorial-toolbar-lang {
+    width: 100%;
+  }
+
+  .tutorial-toolbar-lang {
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .tutorial-toolbar .btn,
+  .tutorial-toolbar #language-select {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .tutorial-article-section {
+    padding: 1.05rem;
+  }
+}

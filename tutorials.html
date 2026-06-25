@@ -1,64 +1,26 @@
-﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>教程目录 | 摩斯密码训练器</title>
-  <meta name="description" content="摩斯密码训练器教程目录，包含入门、Koch 学习法、WPM 提升、QSO 术语等内容。">
+  <title>Tutorial catalog | Morse Trainer</title>
+  <meta name="description" content="Browse systematic Morse code tutorials, covering entry basics, training methods, speed improvement and amateur radio applications.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <main class="screen active">
-    <nav class="top-bar"><a class="btn btn-ghost" href="index.html">返回首页</a></nav>
+<body class="tutorial-page" data-tutorial-page="directory">
+  <main class="screen active tutorial-screen">
+    <div class="tutorial-toolbar"><div class="tutorial-toolbar-group"><a class="btn btn-ghost btn-small" id="tutorial-home-link" href="index.html">Back Home</a></div><div class="tutorial-toolbar-group tutorial-toolbar-lang"><label for="language-select" class="sync-user language-label" data-i18n="langLabel">Language</label><select id="language-select" class="btn btn-ghost btn-small"><option value="en" selected>English</option><option value="zh-CN">中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="es">Español</option></select></div></div>
     <section class="plan-header">
-      <h1>教程目录</h1>
-      <p class="plan-summary">这些内容页更适合做搜索流量和 AdSense 内容承载，你后续可以继续扩展。</p>
+      <h1 id="tutorial-page-title">Tutorial catalog</h1>
+      <p class="plan-summary" id="tutorial-page-summary">has compiled content pages suitable for Morse code beginners and advanced learners. You can read according to the learning path, or directly select the corresponding topic based on the current stuck point.</p>
     </section>
-    <section class="plan-section">
-      <h2>推荐学习路径</h2>
-      <div class="daily-routine">
-        <div class="routine-card"><strong>第 1 步：先理解摩斯码</strong><p>建议先看“什么是摩斯密码”和“摩斯密码对照表怎么记”，建立最基础的认知。</p></div>
-        <div class="routine-card"><strong>第 2 步：学习训练方法</strong><p>再看 “Koch 学习法是什么” 和 “Farnsworth 训练法怎么用”，理解为什么训练方式比死记更重要。</p></div>
-        <div class="routine-card"><strong>第 3 步：进入长期练习</strong><p>接着阅读“如何练听打与抄收”“如何提高 WPM 速度”“每天怎么安排摩斯码训练”。</p></div>
-      </div>
-    </section>
-    <section class="plan-section">
-      <div class="daily-routine">
-        <div class="routine-card"><strong>推荐先看</strong><p>如果你是第一次接触摩斯码，建议先读“什么是摩斯密码”与 “Koch 学习法是什么”。</p></div>
-        <div class="routine-card"><strong>适合做专题页</strong><p>后续可以继续扩展“对照表”“WPM 提升”“业余无线电术语”等主题集群。</p></div>
-        <div class="routine-card"><strong>适合接广告前的内容积累</strong><p>优先把每篇文章补到更完整，加入实例、图表、FAQ 与相关推荐链接。</p></div>
-      </div>
-    </section>
-    <section class="plan-section">
-      <h2>入门基础</h2>
-      <div class="daily-routine">
-        <div class="routine-card"><strong><a href="tutorials/what-is-morse-code.html">什么是摩斯密码</a></strong><p>介绍摩斯密码的基本原理、历史背景和应用场景。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/morse-code-chart-guide.html">摩斯密码对照表怎么记</a></strong><p>教你如何不用硬背整张对照表，而是按节奏和结构记忆。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/common-beginner-mistakes.html">初学摩斯密码的常见错误</a></strong><p>列出最常见的几个误区，帮助新手少走弯路。</p></div>
-      </div>
-    </section>
-    <section class="plan-section">
-      <h2>训练方法</h2>
-      <div class="daily-routine">
-        <div class="routine-card"><strong><a href="tutorials/koch-method-guide.html">Koch 学习法是什么</a></strong><p>解释为什么很多摩斯码学习者都推荐 Koch 渐进法。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/farnsworth-method.html">Farnsworth 训练法怎么用</a></strong><p>解释字符速度和字符间隔的区别，以及为什么它有效。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/how-to-practice-copying.html">如何练听打与抄收</a></strong><p>介绍从单字母到单词、句子、报文的练习路径。</p></div>
-      </div>
-    </section>
-    <section class="plan-section">
-      <h2>进阶提升</h2>
-      <div class="daily-routine">
-        <div class="routine-card"><strong><a href="tutorials/how-to-improve-wpm.html">如何提高 WPM 速度</a></strong><p>讲解提高听辨速度时最值得注意的技巧。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/best-daily-study-plan.html">每天怎么安排摩斯码训练</a></strong><p>给出一个适合大多数人的每日训练模板。</p></div>
-      </div>
-    </section>
-    <section class="plan-section">
-      <h2>无线电应用</h2>
-      <div class="daily-routine">
-        <div class="routine-card"><strong><a href="tutorials/qso-terms-explained.html">CQ、DE、RST、QTH 是什么意思</a></strong><p>解释业余无线电通联里最常见的摩斯码缩写。</p></div>
-        <div class="routine-card"><strong><a href="tutorials/morse-code-for-ham-radio.html">摩斯密码在业余无线电中的应用</a></strong><p>面向无线电爱好者介绍摩斯码在真实场景中的价值。</p></div>
-      </div>
-    </section>
+    <div id="tutorial-content-root"><section class="plan-section"><h2>Recommended learning path</h2><div class="daily-routine"><div class="routine-card"><strong>Step 1: First understand Morse code</strong><p>First read &quot;What is Morse code&quot;, &quot;How to remember the comparison table&quot; and &quot;Common mistakes&quot; to establish a correct introductory understanding.</p></div><div class="routine-card"><strong>Step 2: Learn the training method</strong><p>Continue reading the Koch method, Farnsworth method and listening, typing, copying and collecting exercises to understand why training should be done step by step.</p></div><div class="routine-card"><strong>Step 3: Enter long-term improvement</strong><p>Finally, look at WPM improvement, daily training arrangements and radio applications to truly turn practice into long-term skills.</p></div></div></section><section class="plan-section"><h2>is suitable for you at different stages.</h2><div class="daily-routine"><div class="routine-card"><strong>is suitable for people who are in contact with you for the first time.</strong><p>Prioritize reading articles about basic concepts and training misunderstandings, and get your learning in the right direction first.</p></div><div class="routine-card"><strong>is suitable for people who have already started practicing.</strong><p>focuses on training methods, listening, typing, copying, and speeding up ideas to make training more systematic.</p></div><div class="routine-card"><strong>is suitable for long-term content accumulation.</strong><p>can continue to expand the content cluster around FAQ, speed improvement, radio scenarios and practical cases.</p></div></div></section><section class="plan-section"><h2>Getting Started Basics</h2><div class="daily-routine"><div class="routine-card"><strong><a href="tutorials/what-is-morse-code.html">What is Morse Code</a></strong><p>Starting with the definition, history and usage scenarios, first figure out what you are learning.</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-chart-guide.html">How to remember the Morse code comparison table</a></strong><p>Understand why the comparison table is an auxiliary tool, not the entire training itself.</p></div><div class="routine-card"><strong><a href="tutorials/common-beginner-mistakes.html">Common mistakes in learning Morse code for beginners</a></strong><p>First avoid several typical misunderstandings that are most likely to slow down progress.</p></div></div></section><section class="plan-section"><h2>Training method</h2><div class="daily-routine"><div class="routine-card"><strong><a href="tutorials/koch-method-guide.html">What is the Koch learning method?</a></strong><p>Understand why many learners train with a gradually expanding route of a small number of characters.</p></div><div class="routine-card"><strong><a href="tutorials/farnsworth-method.html">Farnsworth training method: How to use</a></strong><p>to distinguish character speed and character interval, and understand a more natural entry transition method.</p></div><div class="routine-card"><strong><a href="tutorials/how-to-practice-copying.html">How to practice listening, typing and copying</a></strong><p>moves from single characters to continuous input, making the training closer to real use.</p></div></div></section><section class="plan-section"><h2>Advanced improvement</h2><div class="daily-routine"><div class="routine-card"><strong><a href="tutorials/how-to-improve-wpm.html">How to improve WPM speed</a></strong><p>Understand the prerequisites, steps and common misunderstandings of speeding up, instead of blindly pursuing faster speed.</p></div><div class="routine-card"><strong><a href="tutorials/best-daily-study-plan.html">How to arrange Morse code training every day</a></strong><p>Establish a daily training structure suitable for long-term persistence.</p></div></div></section><section class="plan-section"><h2>Radio application</h2><div class="daily-routine"><div class="routine-card"><strong><a href="tutorials/qso-terms-explained.html">What do CQ, DE, RST, and QTH mean?</a></strong><p>First master the most common abbreviations and terms in communication to reduce the strangeness of real scenes.</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-for-ham-radio.html">The Application of Morse Code in Amateur Radio</a></strong><p>Understand why Morse Code still has long-term value in radio amateur circles.</p></div></div></section><section class="plan-section"><h2>Supplementary Topic</h2><div class="daily-routine"><div class="routine-card"><strong><a href="tutorials/morse-code-speed-ramp.html">How to Improve Morse Code Speed ​​Step by Step</a></strong><p>Understand speed improvement from three perspectives: speed-up method, speed stabilization and fall-back consolidation.</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-shortcuts-and-qcodes.html">Common abbreviations and Q codes in Morse code</a></strong><p>helps you to familiarize yourself with the abbreviations and fixed expressions often seen in real communications in advance.</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-training-troubleshooting.html">What to do if the Morse code training is stuck?</a></strong><p>helps you troubleshoot speed, content, review of wrong questions and training structure issues.</p></div><div class="routine-card"><strong><a href="tutorials/how-to-build-a-morse-routine.html">How to establish a Morse code training habit that suits you</a></strong><p>Make training a habit that you can stick to every day. How to arrange the</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-lesson-plan-for-beginners.html">Morse code learning route for newbies?</a></strong><p>gives a clear learning sequence from entry to continuous training. What are the techniques for</p></div><div class="routine-card"><strong><a href="tutorials/morse-code-listening-tips.html">Morse code listening training?</a></strong><p>is a very practical technique for improving rhythm recognition and continuous listening.</p></div></div></section></div>
   </main>
+  <script src="js/i18n.js"></script>
+  <script src="js/tutorial-data.js"></script>
+  <script src="js/tutorial-renderer.js"></script>
 </body>
 </html>

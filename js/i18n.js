@@ -1,4 +1,4 @@
-﻿const MORSE_LANG_KEY = 'morse-trainer-lang';
+﻿const MORSE_LANG_KEY = 'morse-trainer-lang-v2';
 
 const TRANSLATIONS = {
   'zh-CN': {
