@@ -189,11 +189,7 @@ const TRANSLATIONS = {
 function getLanguage() {
   const saved = localStorage.getItem(MORSE_LANG_KEY);
   if (saved && TRANSLATIONS[saved]) return saved;
-  const browserLang = navigator.language || 'zh-CN';
-  if (TRANSLATIONS[browserLang]) return browserLang;
-  const short = browserLang.split('-')[0];
-  const match = Object.keys(TRANSLATIONS).find((key) => key === short || key.startsWith(`${short}-`));
-  return match || 'zh-CN';
+  return 'en';
 }
 
 function format(template, vars = {}) {
