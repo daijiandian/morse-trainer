@@ -14,6 +14,15 @@
     return;
   }
 
+  if (
+    document.querySelector(
+      'script[src*="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]'
+    )
+  ) {
+    document.documentElement.dataset.adsense = 'enabled';
+    return;
+  }
+
   if (document.querySelector('script[data-morse-adsense-loader="true"]')) {
     document.documentElement.dataset.adsense = 'enabled';
     return;
