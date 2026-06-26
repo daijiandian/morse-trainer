@@ -12,8 +12,7 @@ let sessionRecorded = false;
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 const appTr = (key, vars = {}) => window.MORSE_I18N?.t?.(key, vars) || key;
-const appLang = () => window.MORSE_I18N?.getLanguage?.() || window.MORSE_I18N?.currentLang || 'zh-CN';
-const isZhApp = () => appLang() === 'zh-CN';
+const appLang = () => window.MORSE_I18N?.getLanguage?.() || window.MORSE_I18N?.currentLang || 'en';
 
 const screens = {
   home: $('#screen-home'),

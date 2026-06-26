@@ -1,0 +1,2 @@
+# ads.txt for https://www.mmccode.com
+google.com, pub-1195582871220373, DIRECT, f08c47fec0942fa0

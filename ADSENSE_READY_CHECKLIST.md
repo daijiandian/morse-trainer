@@ -10,10 +10,13 @@
 
 ## 基础页面
 
-- [ ] `about.html` 已补充真实项目介绍
-- [ ] `privacy.html` 已补充真实隐私政策
-- [ ] `contact.html` 已填写有效联系邮箱
-- [ ] `tutorials.html` 可正常访问
+- [x] `about.html` 已补充真实项目介绍
+- [x] `privacy.html` 已补充隐私、Cookie、广告基础说明
+- [x] `terms.html` 已新增使用条款
+- [x] `advertising.html` 已新增广告说明页
+- [x] `contact.html` 已填写有效联系邮箱
+- [x] `tutorials.html` 可正常访问
+- [x] `ads.txt` 已创建模板文件（待填真实 `pub-xxxxxxxx`）
 
 ## 内容准备
 
@@ -37,6 +40,9 @@
 - [ ] 已确认没有违规内容
 - [ ] 已确认页面不是为了广告而存在
 - [ ] 已准备好 Google AdSense 申请账号
+- [ ] 已拿到真实 AdSense Publisher ID，并替换 `ads.txt` 注释模板
+- [ ] 已在站点头部接入正式 AdSense 代码
+- [ ] 已准备好合规的地区同意方案（如面向 EEA/UK 流量）
 - [ ] 已先让站点被搜索引擎收录一段时间
 
 ## 申请后观察
