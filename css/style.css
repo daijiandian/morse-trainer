@@ -1172,6 +1172,16 @@ body::before {
   margin-bottom: 1rem;
 }
 
+.plan-section > p {
+  color: var(--text-muted);
+  line-height: 1.82;
+  margin: 0 0 0.95rem;
+}
+
+.plan-section > p:last-child {
+  margin-bottom: 0;
+}
+
 .daily-routine {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1236,6 +1246,10 @@ body::before {
 
 .routine-card a:hover {
   color: var(--accent-strong);
+}
+
+.routine-card strong + p {
+  margin-top: 0.15rem;
 }
 
 .section-action {
