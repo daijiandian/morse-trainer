@@ -245,6 +245,9 @@ Object.assign(TRANSLATIONS['zh-CN'], {
   footerAds: '广告说明',
   footerContact: '联系',
   footerLine2: '结合学习计划、教程内容与同步进度，逐步建立稳定的摩斯训练习惯。',
+  homeInfo6Title: '编辑政策',
+  homeInfo6Desc: '查看教程内容如何审核、纠错，以及如何与未来广告决策保持分离。',
+  footerEditorial: '编辑政策',
 });
 
 Object.assign(TRANSLATIONS.en, {
@@ -297,6 +300,9 @@ Object.assign(TRANSLATIONS.en, {
   footerAds: 'Advertising',
   footerContact: 'Contact',
   footerLine2: 'Use the study plan, tutorials, and synced progress to build steady Morse skill over time.',
+  homeInfo6Title: 'Editorial Policy',
+  homeInfo6Desc: 'See how tutorial content is reviewed, corrected, and kept separate from future ad decisions.',
+  footerEditorial: 'Editorial Policy',
 });
 
 Object.assign(TRANSLATIONS.ja, {
@@ -371,6 +377,9 @@ Object.assign(TRANSLATIONS.ja, {
   footerAds: '広告について',
   footerContact: 'お問い合わせ',
   footerLine2: '学習計画、チュートリアル、同期進捗を使って、モールス技能を着実に積み上げましょう。',
+  homeInfo6Title: '編集方針',
+  homeInfo6Desc: 'チュートリアルの確認方法、修正方針、将来の広告判断との分離について説明します。',
+  footerEditorial: '編集方針',
 });
 
 Object.assign(TRANSLATIONS.ko, {
@@ -445,6 +454,9 @@ Object.assign(TRANSLATIONS.ko, {
   footerAds: '광고 안내',
   footerContact: '문의',
   footerLine2: '학습 계획, 튜토리얼, 동기화된 진행 기록으로 모스 실력을 꾸준히 쌓아가세요.',
+  homeInfo6Title: '편집 정책',
+  homeInfo6Desc: '튜토리얼이 어떻게 검토되고 수정되며 향후 광고 판단과 분리되는지 설명합니다.',
+  footerEditorial: '편집 정책',
 });
 
 Object.assign(TRANSLATIONS.es, {
@@ -516,6 +528,9 @@ Object.assign(TRANSLATIONS.es, {
   footerAds: 'Publicidad',
   footerContact: 'Contacto',
   footerLine2: 'Usa el plan de estudio, los tutoriales y el progreso sincronizado para mejorar tu Morse de forma constante.',
+  homeInfo6Title: 'Politica editorial',
+  homeInfo6Desc: 'Explica como se revisa y corrige el contenido y como se separa de futuras decisiones publicitarias.',
+  footerEditorial: 'Politica editorial',
 });
 
 function getLanguage() {
