@@ -2,11 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.mmccode.com/</loc></url>
   <url><loc>https://www.mmccode.com/about.html</loc></url>
-  <url><loc>https://www.mmccode.com/privacy.html</loc></url>
-  <url><loc>https://www.mmccode.com/terms.html</loc></url>
-  <url><loc>https://www.mmccode.com/advertising.html</loc></url>
-  <url><loc>https://www.mmccode.com/contact.html</loc></url>
-  <url><loc>https://www.mmccode.com/tutorials.html</loc></url>
+<url><loc>https://www.mmccode.com/privacy.html</loc></url>
+<url><loc>https://www.mmccode.com/terms.html</loc></url>
+<url><loc>https://www.mmccode.com/advertising.html</loc></url>
+<url><loc>https://www.mmccode.com/contact.html</loc></url>
+<url><loc>https://www.mmccode.com/help.html</loc></url>
+<url><loc>https://www.mmccode.com/faq.html</loc></url>
+<url><loc>https://www.mmccode.com/tutorials.html</loc></url>
   <url><loc>https://www.mmccode.com/tutorials/what-is-morse-code.html</loc></url>
   <url><loc>https://www.mmccode.com/tutorials/morse-code-chart-guide.html</loc></url>
   <url><loc>https://www.mmccode.com/tutorials/common-beginner-mistakes.html</loc></url>
