@@ -16,6 +16,10 @@
     return data.directory.localizations[lang] || data.directory.localizations.en || data.directory.localizations['zh-CN'];
   }
 
+  function getHistoryHub(lang) {
+    return data.historyHub?.localizations?.[lang] || data.historyHub?.localizations?.en || data.historyHub?.localizations?.['zh-CN'];
+  }
+
   function getArticle(slug, lang) {
     const article = data.articles[slug];
     if (!article) return null;
@@ -129,8 +133,7 @@
     setMeta(localized.pageTitle, localized.metaDescription, url, type);
   }
 
-  function setDirectoryStructuredData(lang, localized) {
-    const pageUrl = `${SITE_URL}/tutorials.html`;
+  function setCollectionStructuredData(lang, localized, pageUrl, breadcrumbItems) {
     const items = collectLinkedCards(localized.sections);
     setJsonLd('tutorial-primary-jsonld', {
       '@context': 'https://schema.org',
@@ -156,10 +159,7 @@
         url: toPublicUrl(card.href)
       }))
     });
-    setJsonLd('tutorial-breadcrumb-jsonld', buildBreadcrumb([
-      { name: SITE_NAME, url: SITE_URL + '/' },
-      { name: localized.title, url: pageUrl }
-    ]));
+    setJsonLd('tutorial-breadcrumb-jsonld', buildBreadcrumb(breadcrumbItems));
   }
 
   function setArticleStructuredData(lang, slug, localized) {
@@ -188,12 +188,11 @@
     ]));
   }
 
-  function renderDirectory(lang) {
-    const localized = getDirectory(lang);
+  function renderCollection(localized, url, breadcrumbItems, lang) {
     if (!localized) return;
     setToolbar(lang);
-    setHeader(localized, `${SITE_URL}/tutorials.html`, 'website');
-    setDirectoryStructuredData(lang, localized);
+    setHeader(localized, url, 'website');
+    setCollectionStructuredData(lang, localized, url, breadcrumbItems);
     const root = document.getElementById('tutorial-content-root');
     if (!root) return;
     root.innerHTML = localized.sections.map((section) => `
@@ -202,6 +201,24 @@
         <div class="daily-routine">${section.cards.map(renderCard).join('')}</div>
       </section>
     `).join('');
+  }
+
+  function renderDirectory(lang) {
+    const localized = getDirectory(lang);
+    renderCollection(localized, `${SITE_URL}/tutorials.html`, [
+      { name: SITE_NAME, url: SITE_URL + '/' },
+      { name: localized?.title || 'Tutorial Catalog', url: `${SITE_URL}/tutorials.html` }
+    ], lang);
+  }
+
+  function renderHistoryHub(lang) {
+    const localized = getHistoryHub(lang);
+    const directoryTitle = getDirectory(lang)?.title || 'Tutorial Catalog';
+    renderCollection(localized, `${SITE_URL}/history.html`, [
+      { name: SITE_NAME, url: SITE_URL + '/' },
+      { name: directoryTitle, url: `${SITE_URL}/tutorials.html` },
+      { name: localized?.title || 'Morse Code History Hub', url: `${SITE_URL}/history.html` }
+    ], lang);
   }
 
   function renderArticle(lang, slug) {
@@ -237,6 +254,10 @@
     const type = document.body.dataset.tutorialPage;
     if (type === 'directory') {
       renderDirectory(lang);
+      return;
+    }
+    if (type === 'history-hub') {
+      renderHistoryHub(lang);
       return;
     }
     if (type === 'article') {
