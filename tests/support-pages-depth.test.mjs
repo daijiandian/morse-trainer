@@ -35,10 +35,12 @@ test('key trust and support pages carry enough standalone value for site review'
     },
     {
       file: 'advertising.html',
-      minWords: 680,
+      minWords: 760,
       requiredHeadings: [
         'What advertisers cannot influence',
         'Why ad disclosures belong on a learning site',
+        'Why ads will never unlock learning features',
+        'How ad review differs from technical support',
       ],
     },
     {
