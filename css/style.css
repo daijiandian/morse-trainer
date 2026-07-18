@@ -204,6 +204,17 @@ body::before {
   line-height: 1.8;
 }
 
+.hero-note {
+  margin: 0 0 1.4rem;
+  max-width: 720px;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(8, 14, 24, 0.48);
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
 .hero-actions { display: flex; gap: 0.75rem; justify-content: flex-start; flex-wrap: wrap; position: relative; z-index: 1; }
 
 .hero-dashboard {
@@ -624,6 +635,16 @@ body::before {
 
 .section-heading h2 {
   margin-bottom: 0;
+}
+
+.section-note {
+  margin: -0.1rem 0 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid rgba(245, 185, 66, 0.55);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-soft);
+  line-height: 1.7;
 }
 
 @keyframes sectionPulse {

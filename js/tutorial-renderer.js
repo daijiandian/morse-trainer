@@ -3,6 +3,154 @@
   if (!data) return;
   const SITE_URL = 'https://www.mmccode.com';
   const SITE_NAME = 'Morse Trainer';
+  const LAST_UPDATED = 'July 18, 2026';
+  const TRUST_COPY = {
+    en: {
+      note: `Last updated: ${LAST_UPDATED} · Maintained as part of the public Morse Trainer tutorial library on mmccode.com.`,
+      sectionTitle: 'Public site and editorial links',
+      sectionDesc: 'For corrections, support, privacy requests, and public policy details, use the pages below.',
+      aboutTitle: 'About',
+      aboutDesc: 'Learn what the project offers, who it helps, and how the site is maintained.',
+      editorialTitle: 'Editorial Policy',
+      editorialDesc: 'See how tutorials are reviewed, corrected, and kept separate from advertising decisions.',
+      privacyTitle: 'Privacy Policy',
+      privacyDesc: 'Review how account, cookie, and infrastructure-related data handling works.',
+      glossaryTitle: 'Morse Code Glossary',
+      glossaryDesc: 'Use a practical reference page for learning terms, on-air shorthand, and equipment vocabulary.',
+      contactTitle: 'Contact',
+      contactDesc: 'Use the public support page for corrections, privacy requests, and direct help.',
+      footerLine: 'Structured Morse learning platform · Tutorials, practice, and public support pages',
+      footerTutorials: 'Tutorials',
+      footerStartHere: 'Start Here',
+      footerHowItWorks: 'How It Works',
+      footerRoadmap: 'Roadmap',
+      footerSiteMap: 'Site Map',
+      footerAbout: 'About',
+      footerPrivacy: 'Privacy Policy',
+      footerTerms: 'Terms',
+      footerAds: 'Advertising',
+      footerEditorial: 'Editorial Policy',
+      footerHelp: 'Help Center',
+      footerFaq: 'FAQ',
+      footerContact: 'Contact'
+    },
+    'zh-CN': {
+      note: `最后更新：2026 年 7 月 18 日 · 本页属于 mmccode.com 公开维护的 Morse Trainer 教程内容体系。`,
+      sectionTitle: '公开站点与编辑说明',
+      sectionDesc: '如果你需要查看纠错方式、支持渠道、隐私说明或站点政策，请使用下列公开页面。',
+      aboutTitle: '关于',
+      aboutDesc: '了解项目提供什么、适合谁使用，以及站点如何持续维护。',
+      editorialTitle: '编辑政策',
+      editorialDesc: '查看教程内容如何审核、纠错，以及如何与广告决策保持分离。',
+      privacyTitle: '隐私政策',
+      privacyDesc: '了解账号、Cookie 与基础设施相关的数据处理方式。',
+      glossaryTitle: '摩斯术语表',
+      glossaryDesc: '通过一个实用参考页快速理解训练术语、无线电缩写和设备词汇。',
+      contactTitle: '联系',
+      contactDesc: '如需纠错、隐私请求或直接支持，请使用公开联系页。',
+      footerLine: '结构化摩斯学习平台 · 教程、训练与公开支持页面',
+      footerTutorials: '教程',
+      footerStartHere: '新手开始',
+      footerHowItWorks: '工作原理',
+      footerRoadmap: '学习路线图',
+      footerSiteMap: '站点地图',
+      footerAbout: '关于',
+      footerPrivacy: '隐私政策',
+      footerTerms: '使用条款',
+      footerAds: '广告说明',
+      footerEditorial: '编辑政策',
+      footerHelp: '帮助中心',
+      footerFaq: '常见问题',
+      footerContact: '联系'
+    },
+    ja: {
+      note: `最終更新: 2026年7月18日 · このページは mmccode.com で公開運用されている Morse Trainer のチュートリアル体系の一部です。`,
+      sectionTitle: '公開サイトと編集案内',
+      sectionDesc: '修正方針、サポート窓口、プライバシー説明、サイトポリシーを確認したい場合は、下の公開ページを利用してください。',
+      aboutTitle: 'About',
+      aboutDesc: 'このプロジェクトが何を提供し、誰に役立ち、サイトがどう維持されているかを確認できます。',
+      editorialTitle: 'Editorial Policy',
+      editorialDesc: 'チュートリアルの確認方法、修正方針、広告判断との分離について説明します。',
+      privacyTitle: 'Privacy Policy',
+      privacyDesc: 'アカウント、Cookie、基盤サービスに関するデータ処理を確認できます。',
+      glossaryTitle: 'モールス用語集',
+      glossaryDesc: '学習用語、無線略語、機材語彙をまとめて確認できる実用リファレンスです。',
+      contactTitle: 'Contact',
+      contactDesc: '修正依頼、プライバシー相談、直接サポートが必要な場合は公開窓口を利用してください。',
+      footerLine: '構造化されたモールス学習プラットフォーム · チュートリアル、練習、公開サポートページ',
+      footerTutorials: 'チュートリアル',
+      footerStartHere: 'Start Here',
+      footerHowItWorks: 'How It Works',
+      footerRoadmap: 'Roadmap',
+      footerSiteMap: 'サイトマップ',
+      footerAbout: 'About',
+      footerPrivacy: 'Privacy Policy',
+      footerTerms: 'Terms',
+      footerAds: 'Advertising',
+      footerEditorial: 'Editorial Policy',
+      footerHelp: 'Help Center',
+      footerFaq: 'FAQ',
+      footerContact: 'Contact'
+    },
+    ko: {
+      note: `마지막 업데이트: 2026년 7월 18일 · 이 페이지는 mmccode.com 에서 공개 운영 중인 Morse Trainer 튜토리얼 라이브러리의 일부입니다.`,
+      sectionTitle: '공개 사이트 및 편집 안내',
+      sectionDesc: '수정 기준, 지원 경로, 개인정보 안내, 사이트 정책을 확인하려면 아래 공개 페이지를 이용하세요.',
+      aboutTitle: 'About',
+      aboutDesc: '이 프로젝트가 무엇을 제공하고 누구에게 도움이 되며 사이트가 어떻게 유지되는지 확인합니다.',
+      editorialTitle: 'Editorial Policy',
+      editorialDesc: '튜토리얼이 어떻게 검토되고 수정되며 광고 판단과 분리되는지 설명합니다.',
+      privacyTitle: 'Privacy Policy',
+      privacyDesc: '계정, 쿠키, 인프라 관련 데이터 처리 방식을 검토합니다.',
+      glossaryTitle: '모스 용어집',
+      glossaryDesc: '학습 용어, 무선 약어, 장비 어휘를 정리한 실용 참고 페이지를 확인하세요.',
+      contactTitle: 'Contact',
+      contactDesc: '수정 요청, 개인정보 문의, 직접 지원이 필요하면 공개 문의 페이지를 이용하세요.',
+      footerLine: '구조화된 모스 학습 플랫폼 · 튜토리얼, 훈련, 공개 지원 페이지',
+      footerTutorials: '튜토리얼',
+      footerStartHere: 'Start Here',
+      footerHowItWorks: 'How It Works',
+      footerRoadmap: 'Roadmap',
+      footerSiteMap: '사이트 맵',
+      footerAbout: 'About',
+      footerPrivacy: 'Privacy Policy',
+      footerTerms: 'Terms',
+      footerAds: 'Advertising',
+      footerEditorial: 'Editorial Policy',
+      footerHelp: 'Help Center',
+      footerFaq: 'FAQ',
+      footerContact: 'Contact'
+    },
+    es: {
+      note: `Última actualización: 18 de julio de 2026 · Esta página forma parte de la biblioteca pública de tutoriales de Morse Trainer mantenida en mmccode.com.`,
+      sectionTitle: 'Enlaces públicos y política editorial',
+      sectionDesc: 'Si necesitas ver correcciones, soporte, privacidad o políticas públicas del sitio, usa las páginas siguientes.',
+      aboutTitle: 'About',
+      aboutDesc: 'Descubre qué ofrece el proyecto, a quién ayuda y cómo se mantiene el sitio.',
+      editorialTitle: 'Editorial Policy',
+      editorialDesc: 'Explica cómo se revisan y corrigen los tutoriales y cómo se separan de las decisiones publicitarias.',
+      privacyTitle: 'Privacy Policy',
+      privacyDesc: 'Revisa cómo se manejan los datos de cuenta, las cookies y la infraestructura del sitio.',
+      glossaryTitle: 'Glosario del código Morse',
+      glossaryDesc: 'Usa una referencia práctica para entender términos de aprendizaje, abreviaturas de radio y vocabulario de equipos.',
+      contactTitle: 'Contact',
+      contactDesc: 'Usa la página pública de contacto para correcciones, solicitudes de privacidad y ayuda directa.',
+      footerLine: 'Plataforma estructurada para aprender Morse · Tutoriales, práctica y páginas públicas de soporte',
+      footerTutorials: 'Tutoriales',
+      footerStartHere: 'Start Here',
+      footerHowItWorks: 'How It Works',
+      footerRoadmap: 'Roadmap',
+      footerSiteMap: 'Mapa del sitio',
+      footerAbout: 'About',
+      footerPrivacy: 'Privacy Policy',
+      footerTerms: 'Terms',
+      footerAds: 'Advertising',
+      footerEditorial: 'Editorial Policy',
+      footerHelp: 'Help Center',
+      footerFaq: 'FAQ',
+      footerContact: 'Contact'
+    }
+  };
 
   function getLang() {
     return window.MORSE_I18N?.getLanguage?.() || 'en';
@@ -107,6 +255,79 @@
     }, []);
   }
 
+  function getTrustCopy(lang) {
+    return TRUST_COPY[lang] || TRUST_COPY.en;
+  }
+
+  function getUiLabel(key, fallback) {
+    return window.MORSE_I18N?.t?.(key) || fallback;
+  }
+
+  function ensureHeaderNote(lang) {
+    const header = document.querySelector('.plan-header');
+    if (!header) return;
+    let note = header.querySelector('.tutorial-meta-note');
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'section-desc tutorial-meta-note';
+      header.appendChild(note);
+    }
+    note.textContent = getTrustCopy(lang).note;
+  }
+
+  function ensureTrustSection(lang) {
+    const root = document.getElementById('tutorial-content-root');
+    if (!root) return;
+    let section = document.getElementById('tutorial-trust-section');
+    if (!section) {
+      section = document.createElement('section');
+      section.id = 'tutorial-trust-section';
+      section.className = 'plan-section';
+      root.appendChild(section);
+    }
+    const copy = getTrustCopy(lang);
+    section.innerHTML = `
+      <h3>${escapeHtml(copy.sectionTitle)}</h3>
+      <p class="section-desc">${escapeHtml(copy.sectionDesc)}</p>
+      <div class="daily-routine feature-grid">
+        ${renderCard({ href: '../about.html', title: getUiLabel('footerAbout', copy.aboutTitle), desc: copy.aboutDesc }).replace('href="../about.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../about.html' : 'about.html') + '"')}
+        ${renderCard({ href: '../editorial-policy.html', title: getUiLabel('footerEditorial', copy.editorialTitle), desc: copy.editorialDesc }).replace('href="../editorial-policy.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../editorial-policy.html' : 'editorial-policy.html') + '"')}
+        ${renderCard({ href: '../privacy.html', title: getUiLabel('footerPrivacy', copy.privacyTitle), desc: copy.privacyDesc }).replace('href="../privacy.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../privacy.html' : 'privacy.html') + '"')}
+        ${renderCard({ href: '../morse-glossary.html', title: copy.glossaryTitle, desc: copy.glossaryDesc }).replace('href="../morse-glossary.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../morse-glossary.html' : 'morse-glossary.html') + '"')}
+        ${renderCard({ href: '../contact.html', title: getUiLabel('footerContact', copy.contactTitle), desc: copy.contactDesc }).replace('href="../contact.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../contact.html' : 'contact.html') + '"')}
+      </div>
+    `;
+  }
+
+  function ensureFooter(lang) {
+    const copy = getTrustCopy(lang);
+    let footer = document.querySelector('footer.footer');
+    if (!footer) {
+      footer = document.createElement('footer');
+      footer.className = 'footer';
+      document.body.appendChild(footer);
+    }
+    const prefix = document.body.dataset.tutorialPage === 'article' ? '../' : '';
+    footer.innerHTML = `
+      <p>${escapeHtml(copy.footerLine)}</p>
+      <p>
+        <a href="${prefix}tutorials.html">${escapeHtml(getUiLabel('footerTutorials', copy.footerTutorials))}</a>
+        &middot; <a href="${prefix}start-here.html">${escapeHtml(getUiLabel('footerStartHere', copy.footerStartHere))}</a>
+        &middot; <a href="${prefix}how-it-works.html">${escapeHtml(getUiLabel('footerHowItWorks', copy.footerHowItWorks))}</a>
+        &middot; <a href="${prefix}learning-roadmap.html">${escapeHtml(getUiLabel('footerRoadmap', copy.footerRoadmap))}</a>
+        &middot; <a href="${prefix}site-map.html">${escapeHtml(getUiLabel('footerSiteMap', copy.footerSiteMap))}</a>
+        &middot; <a href="${prefix}about.html">${escapeHtml(getUiLabel('footerAbout', copy.footerAbout))}</a>
+        &middot; <a href="${prefix}privacy.html">${escapeHtml(getUiLabel('footerPrivacy', copy.footerPrivacy))}</a>
+        &middot; <a href="${prefix}terms.html">${escapeHtml(getUiLabel('footerTerms', copy.footerTerms))}</a>
+        &middot; <a href="${prefix}advertising.html">${escapeHtml(getUiLabel('footerAds', copy.footerAds))}</a>
+        &middot; <a href="${prefix}editorial-policy.html">${escapeHtml(getUiLabel('footerEditorial', copy.footerEditorial))}</a>
+        &middot; <a href="${prefix}help.html">${escapeHtml(getUiLabel('footerHelp', copy.footerHelp))}</a>
+        &middot; <a href="${prefix}faq.html">${escapeHtml(getUiLabel('footerFaq', copy.footerFaq))}</a>
+        &middot; <a href="${prefix}contact.html">${escapeHtml(getUiLabel('footerContact', copy.footerContact))}</a>
+      </p>
+    `;
+  }
+
   function setMeta(title, description, url, type) {
     document.title = title;
     setNamedMeta('description', description);
@@ -143,6 +364,9 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
+      dateModified: '2026-07-18',
+      author: buildOrganization(),
+      publisher: buildOrganization(),
       isPartOf: {
         '@type': 'WebSite',
         name: SITE_NAME,
@@ -172,6 +396,7 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
+      dateModified: '2026-07-18',
       mainEntityOfPage: pageUrl,
       author: buildOrganization(),
       publisher: buildOrganization(),
@@ -201,6 +426,9 @@
         <div class="daily-routine">${section.cards.map(renderCard).join('')}</div>
       </section>
     `).join('');
+    ensureHeaderNote(lang);
+    ensureTrustSection(lang);
+    ensureFooter(lang);
   }
 
   function renderDirectory(lang) {
@@ -247,6 +475,9 @@
         <div class="daily-routine">${related}</div>
       </section>
     `;
+    ensureHeaderNote(lang);
+    ensureTrustSection(lang);
+    ensureFooter(lang);
   }
 
   function renderCurrentTutorialPage() {
