@@ -41,6 +41,22 @@ test('key trust and support pages carry enough standalone value for site review'
         'Why ad disclosures belong on a learning site',
       ],
     },
+    {
+      file: 'contact.html',
+      minWords: 700,
+      requiredHeadings: [
+        'When a public page is not enough',
+        'What not to send in a first message',
+      ],
+    },
+    {
+      file: 'faq.html',
+      minWords: 700,
+      requiredHeadings: [
+        'What question belongs in the FAQ and what belongs in support',
+        'Why public answers help site quality',
+      ],
+    },
   ];
 
   for (const page of cases) {
