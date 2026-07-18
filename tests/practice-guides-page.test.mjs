@@ -36,3 +36,13 @@ test('practice guides hub contains training sections that group existing tutoria
   assert.match(practiceHub, /Daily structure and troubleshooting/);
   assert.match(practiceHub, /From drills to real-world use/);
 });
+
+test('practice guides hub footer exposes the same public trust pages as other core entry pages', () => {
+  const practiceHub = read('practice-guides.html');
+
+  assert.match(practiceHub, /href="privacy\.html"/);
+  assert.match(practiceHub, /href="terms\.html"/);
+  assert.match(practiceHub, /href="advertising\.html"/);
+  assert.match(practiceHub, /href="editorial-policy\.html"/);
+  assert.match(practiceHub, /href="faq\.html"/);
+});
