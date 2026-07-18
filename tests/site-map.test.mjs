@@ -48,3 +48,13 @@ test('tutorial articles expose the site map in their static fallback footer', ()
     assert.match(read(page), /href=\"\.\.\/site-map\.html\"/, `${page} is missing the site map footer link`);
   }
 });
+
+test('site map page includes a visible public trust section and independence note', () => {
+  const siteMap = read('site-map.html');
+
+  assert.match(siteMap, /Public site and editorial links/);
+  assert.match(siteMap, /independently of advertising decisions/i);
+  assert.match(siteMap, /href="privacy\.html"/);
+  assert.match(siteMap, /href="editorial-policy\.html"/);
+  assert.match(siteMap, /href="contact\.html"/);
+});

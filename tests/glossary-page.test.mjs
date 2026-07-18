@@ -55,3 +55,13 @@ test('glossary page contains practical learning sections', () => {
   assert.match(glossary, /Equipment and sending terms/);
   assert.match(glossary, /Related next steps/);
 });
+
+test('glossary page includes a visible public trust section and independence note', () => {
+  const glossary = read('morse-glossary.html');
+
+  assert.match(glossary, /Public site and editorial links/);
+  assert.match(glossary, /independently of advertising decisions/i);
+  assert.match(glossary, /href="privacy\.html"/);
+  assert.match(glossary, /href="editorial-policy\.html"/);
+  assert.match(glossary, /href="contact\.html"/);
+});
