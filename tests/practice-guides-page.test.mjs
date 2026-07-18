@@ -46,3 +46,13 @@ test('practice guides hub footer exposes the same public trust pages as other co
   assert.match(practiceHub, /href="editorial-policy\.html"/);
   assert.match(practiceHub, /href="faq\.html"/);
 });
+
+test('practice guides hub includes a visible public trust section above the footer', () => {
+  const practiceHub = read('practice-guides.html');
+
+  assert.match(practiceHub, /Public site and editorial links/);
+  assert.match(practiceHub, /independently of advertising decisions/i);
+  assert.match(practiceHub, /href="privacy\.html"/);
+  assert.match(practiceHub, /href="editorial-policy\.html"/);
+  assert.match(practiceHub, /href="contact\.html"/);
+});

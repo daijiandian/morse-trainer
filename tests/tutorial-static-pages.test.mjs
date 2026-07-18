@@ -17,12 +17,13 @@ function listTutorialFiles() {
 }
 
 test('static tutorial pages expose readable maintenance copy and glossary support links', () => {
-  const files = ['history.html', ...listTutorialFiles()];
+  const files = ['history.html', 'tutorials.html', ...listTutorialFiles()];
 
   for (const file of files) {
     const html = read(file);
     assert.doesNotMatch(html, /July 18, 2026 路/);
     assert.match(html, /Last updated: July 18, 2026/);
+    assert.match(html, /independently of advertising decisions/i);
     assert.match(html, /href="[^"]*about\.html"/);
     assert.match(html, /href="[^"]*editorial-policy\.html"/);
     assert.match(html, /href="[^"]*privacy\.html"/);

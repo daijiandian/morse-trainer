@@ -8,7 +8,7 @@
     en: {
       note: `Last updated: ${LAST_UPDATED} · Maintained as part of the public Morse Trainer tutorial library on mmccode.com.`,
       sectionTitle: 'Public site and editorial links',
-      sectionDesc: 'For corrections, support, privacy requests, and public policy details, use the pages below.',
+      sectionDesc: 'Tutorial content is maintained independently of advertising decisions. For corrections, support, privacy requests, and public policy details, use the pages below.',
       aboutTitle: 'About',
       aboutDesc: 'Learn what the project offers, who it helps, and how the site is maintained.',
       editorialTitle: 'Editorial Policy',
@@ -37,7 +37,7 @@
     'zh-CN': {
       note: `最后更新：2026 年 7 月 18 日 · 本页属于 mmccode.com 公开维护的 Morse Trainer 教程内容体系。`,
       sectionTitle: '公开站点与编辑说明',
-      sectionDesc: '如果你需要查看纠错方式、支持渠道、隐私说明或站点政策，请使用下列公开页面。',
+      sectionDesc: '教程内容独立于广告决策进行维护。如需查看纠错方式、支持渠道、隐私说明或站点政策，请使用下列公开页面。',
       aboutTitle: '关于',
       aboutDesc: '了解项目提供什么、适合谁使用，以及站点如何持续维护。',
       editorialTitle: '编辑政策',
@@ -66,7 +66,7 @@
     ja: {
       note: `最終更新: 2026年7月18日 · このページは mmccode.com で公開運用されている Morse Trainer のチュートリアル体系の一部です。`,
       sectionTitle: '公開サイトと編集案内',
-      sectionDesc: '修正方針、サポート窓口、プライバシー説明、サイトポリシーを確認したい場合は、下の公開ページを利用してください。',
+      sectionDesc: 'チュートリアル内容は広告判断から独立して運用されています。修正方針、サポート窓口、プライバシー説明、サイトポリシーを確認したい場合は、下の公開ページを利用してください。',
       aboutTitle: 'About',
       aboutDesc: 'このプロジェクトが何を提供し、誰に役立ち、サイトがどう維持されているかを確認できます。',
       editorialTitle: 'Editorial Policy',
@@ -95,7 +95,7 @@
     ko: {
       note: `마지막 업데이트: 2026년 7월 18일 · 이 페이지는 mmccode.com 에서 공개 운영 중인 Morse Trainer 튜토리얼 라이브러리의 일부입니다.`,
       sectionTitle: '공개 사이트 및 편집 안내',
-      sectionDesc: '수정 기준, 지원 경로, 개인정보 안내, 사이트 정책을 확인하려면 아래 공개 페이지를 이용하세요.',
+      sectionDesc: '튜토리얼 내용은 광고 결정과 독립적으로 운영됩니다. 수정 기준, 지원 경로, 개인정보 안내, 사이트 정책을 확인하려면 아래 공개 페이지를 이용하세요.',
       aboutTitle: 'About',
       aboutDesc: '이 프로젝트가 무엇을 제공하고 누구에게 도움이 되며 사이트가 어떻게 유지되는지 확인합니다.',
       editorialTitle: 'Editorial Policy',
@@ -124,7 +124,7 @@
     es: {
       note: `Última actualización: 18 de julio de 2026 · Esta página forma parte de la biblioteca pública de tutoriales de Morse Trainer mantenida en mmccode.com.`,
       sectionTitle: 'Enlaces públicos y política editorial',
-      sectionDesc: 'Si necesitas ver correcciones, soporte, privacidad o políticas públicas del sitio, usa las páginas siguientes.',
+      sectionDesc: 'El contenido de los tutoriales se mantiene de forma independiente de las decisiones publicitarias. Si necesitas ver correcciones, soporte, privacidad o políticas públicas del sitio, usa las páginas siguientes.',
       aboutTitle: 'About',
       aboutDesc: 'Descubre qué ofrece el proyecto, a quién ayuda y cómo se mantiene el sitio.',
       editorialTitle: 'Editorial Policy',
