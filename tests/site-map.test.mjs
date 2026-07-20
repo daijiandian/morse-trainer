@@ -89,3 +89,21 @@ test('research and sources page is published and linked from the main review hub
     assert.match(read(page), /href="\.\.\/research-sources\.html"/, `${page} should link to the public research and sources page`);
   }
 });
+
+test('sitemap includes research sources and current review-facing lastmod values', () => {
+  const sitemap = read('sitemap.xml');
+
+  assert.match(sitemap, /https:\/\/www\.mmccode\.com\/research-sources\.html/);
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/www\.mmccode\.com\/tutorials\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+  );
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/www\.mmccode\.com\/history\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+  );
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/www\.mmccode\.com\/research-sources\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+  );
+});
