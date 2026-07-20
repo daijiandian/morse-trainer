@@ -61,3 +61,50 @@ test('public html pages do not contain broken internal href targets', () => {
     }
   }
 });
+
+test('homepage keeps the trainer shell free of direct AdSense loader scripts', () => {
+  const home = read(new URL('index.html', root));
+
+  assert.match(home, /meta name="google-adsense-account"/i);
+  assert.doesNotMatch(home, /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/i);
+  assert.doesNotMatch(home, /js\/adsense\.js/i);
+});
+
+test('adsense loader only targets substantive public content pages', () => {
+  const source = read('js/adsense.js');
+
+  assert.match(source, /tutorials\.html/);
+  assert.match(source, /history\.html/);
+  assert.match(source, /practice-guides\.html/);
+  assert.match(source, /morse-glossary\.html/);
+  assert.match(source, /start-here\.html/);
+  assert.match(source, /how-it-works\.html/);
+  assert.match(source, /learning-roadmap\.html/);
+  assert.doesNotMatch(source, /index\.html/);
+});
+
+test('public html pages do not hard-code the external AdSense runtime script', () => {
+  for (const fileUrl of htmlFiles) {
+    const rel = path.relative(rootPath, fileURLToPath(fileUrl)).replace(/\\/g, '/');
+    const html = read(fileUrl);
+
+    assert.doesNotMatch(
+      html,
+      /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/i,
+      `${rel} should rely on the central adsense loader instead of a hard-coded runtime script`,
+    );
+  }
+});
+
+test('public html pages do not contain visible mojibake markers', () => {
+  for (const fileUrl of htmlFiles) {
+    const rel = path.relative(rootPath, fileURLToPath(fileUrl)).replace(/\\/g, '/');
+    const html = read(fileUrl);
+
+    assert.doesNotMatch(
+      html,
+      /鈥|锟|�/,
+      `${rel} contains mojibake markers that make public copy look broken`,
+    );
+  }
+});

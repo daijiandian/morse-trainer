@@ -3,6 +3,23 @@
   const enabled = config.adsenseEnabled === true;
   const client = String(config.adsenseClient || '').trim();
   const validClient = /^ca-pub-\d{16}$/.test(client);
+  const pathname = (window.location?.pathname || '/').replace(/\/+$/, '') || '/';
+  const allowedPaths = new Set([
+    '/tutorials.html',
+    '/history.html',
+    '/practice-guides.html',
+    '/morse-glossary.html',
+    '/start-here.html',
+    '/how-it-works.html',
+    '/learning-roadmap.html',
+  ]);
+  const isTutorialArticle = /^\/tutorials\/[^/]+\.html$/.test(pathname);
+  const allowAdsenseHere = isTutorialArticle || allowedPaths.has(pathname);
+
+  if (!allowAdsenseHere) {
+    document.documentElement.dataset.adsense = 'disabled';
+    return;
+  }
 
   if (!enabled) {
     document.documentElement.dataset.adsense = 'disabled';
