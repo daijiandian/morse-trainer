@@ -22,11 +22,7 @@ test('static tutorial pages expose readable maintenance copy and glossary suppor
   for (const file of files) {
     const html = read(file);
     assert.doesNotMatch(html, /Last updated: July \d{1,2}, 2026\s*璺/);
-    if (file === 'history.html' || file === 'tutorials.html') {
-      assert.match(html, /Last updated: July 20, 2026/);
-    } else {
-      assert.match(html, /Last updated: July 18, 2026/);
-    }
+    assert.match(html, /Last updated: July 20, 2026/);
     assert.match(html, /independently of advertising decisions/i);
     assert.match(html, /href="[^"]*about\.html"/);
     assert.match(html, /href="[^"]*editorial-policy\.html"/);
@@ -34,6 +30,13 @@ test('static tutorial pages expose readable maintenance copy and glossary suppor
     assert.match(html, /href="[^"]*morse-glossary\.html"/);
     assert.match(html, /href="[^"]*contact\.html"/);
   }
+});
+
+test('tutorial renderer metadata stays aligned with the latest public maintenance date', () => {
+  const source = read('js/tutorial-renderer.js');
+
+  assert.doesNotMatch(source, /dateModified:\s*'2026-07-18'/);
+  assert.match(source, /dateModified:\s*'2026-07-20'/);
 });
 
 test('tutorial hubs explain how content is curated and how readers should use the library', () => {

@@ -3,7 +3,7 @@
   if (!data) return;
   const SITE_URL = 'https://www.mmccode.com';
   const SITE_NAME = 'Morse Trainer';
-  const LAST_UPDATED = 'July 18, 2026';
+  const LAST_UPDATED = 'July 20, 2026';
   const TRUST_COPY = {
     en: {
       note: `Last updated: ${LAST_UPDATED} · Maintained as part of the public Morse Trainer tutorial library on mmccode.com.`,
@@ -35,7 +35,7 @@
       footerContact: 'Contact'
     },
     'zh-CN': {
-      note: `最后更新：2026 年 7 月 18 日 · 本页属于 mmccode.com 公开维护的 Morse Trainer 教程内容体系。`,
+      note: `最后更新：2026 年 7 月 20 日 · 本页属于 mmccode.com 公开维护的 Morse Trainer 教程内容体系。`,
       sectionTitle: '公开站点与编辑说明',
       sectionDesc: '教程内容独立于广告决策进行维护。如需查看纠错方式、支持渠道、隐私说明或站点政策，请使用下列公开页面。',
       aboutTitle: '关于',
@@ -64,7 +64,7 @@
       footerContact: '联系'
     },
     ja: {
-      note: `最終更新: 2026年7月18日 · このページは mmccode.com で公開運用されている Morse Trainer のチュートリアル体系の一部です。`,
+      note: `最終更新: 2026年7月20日 · このページは mmccode.com で公開運用されている Morse Trainer のチュートリアル体系の一部です。`,
       sectionTitle: '公開サイトと編集案内',
       sectionDesc: 'チュートリアル内容は広告判断から独立して運用されています。修正方針、サポート窓口、プライバシー説明、サイトポリシーを確認したい場合は、下の公開ページを利用してください。',
       aboutTitle: '概要',
@@ -93,7 +93,7 @@
       footerContact: 'お問い合わせ'
     },
     ko: {
-      note: `최종 업데이트: 2026년 7월 18일 · 이 페이지는 mmccode.com 에서 공개 운영 중인 Morse Trainer 튜토리얼 모음의 일부입니다.`,
+      note: `최종 업데이트: 2026년 7월 20일 · 이 페이지는 mmccode.com 에서 공개 운영 중인 Morse Trainer 튜토리얼 모음의 일부입니다.`,
       sectionTitle: '공개 사이트 및 편집 안내',
       sectionDesc: '튜토리얼 콘텐츠는 광고 결정과 독립적으로 운영됩니다. 수정 기준, 지원 경로, 개인정보 안내, 사이트 정책을 확인하려면 아래 공개 페이지를 이용하세요.',
       aboutTitle: '소개',
@@ -122,7 +122,7 @@
       footerContact: '문의하기'
     },
     es: {
-      note: `Última actualización: 18 de julio de 2026 · Esta página forma parte de la biblioteca pública de tutoriales de Morse Trainer mantenida en mmccode.com.`,
+      note: `Última actualización: 20 de julio de 2026 · Esta página forma parte de la biblioteca pública de tutoriales de Morse Trainer mantenida en mmccode.com.`,
       sectionTitle: 'Enlaces públicos y política editorial',
       sectionDesc: 'El contenido de los tutoriales se mantiene de forma independiente de las decisiones publicitarias. Si necesitas ver correcciones, soporte, privacidad o políticas públicas del sitio, usa las páginas siguientes.',
       aboutTitle: 'Acerca de',
@@ -364,7 +364,7 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
-      dateModified: '2026-07-18',
+      dateModified: '2026-07-20',
       author: buildOrganization(),
       publisher: buildOrganization(),
       isPartOf: {
@@ -396,7 +396,7 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
-      dateModified: '2026-07-18',
+      dateModified: '2026-07-20',
       mainEntityOfPage: pageUrl,
       author: buildOrganization(),
       publisher: buildOrganization(),
