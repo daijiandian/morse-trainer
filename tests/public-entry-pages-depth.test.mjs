@@ -46,7 +46,7 @@ test('major public entry pages provide deeper standalone value for reviewers and
       minWords: 700,
       requiredHeadings: [
         'Why historical context improves modern practice',
-        'How to use the history hub without treating it as trivia',
+        'How to use history pages without leaving the learning path',
       ],
     },
   ];
