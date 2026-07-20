@@ -59,6 +59,15 @@ test('key trust and support pages carry enough standalone value for site review'
         'Why public answers help site quality',
       ],
     },
+    {
+      file: 'research-sources.html',
+      minWords: 760,
+      requiredHeadings: [
+        'What counts as a source on this site',
+        'How history, media, and culture pages are handled',
+        'How corrections and disputes are handled',
+      ],
+    },
   ];
 
   for (const page of cases) {

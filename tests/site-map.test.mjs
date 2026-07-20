@@ -58,3 +58,34 @@ test('site map page includes a visible public trust section and independence not
   assert.match(siteMap, /href="editorial-policy\.html"/);
   assert.match(siteMap, /href="contact\.html"/);
 });
+
+test('research and sources page is published and linked from the main review hubs', () => {
+  const sourcesPath = new URL('../research-sources.html', import.meta.url);
+  assert.ok(fs.existsSync(sourcesPath), 'research-sources.html should be published for public review');
+
+  const sources = read('research-sources.html');
+  assert.match(sources, /Research (and|&) Sources/i);
+  assert.match(sources, /history|historical|radio|film|media/i);
+  assert.match(sources, /correction|contact|editorial/i);
+
+  const hubPages = [
+    'about.html',
+    'editorial-policy.html',
+    'history.html',
+    'site-map.html',
+    'tutorials.html',
+  ];
+
+  for (const page of hubPages) {
+    assert.match(read(page), /href="research-sources\.html"/, `${page} should link to the public research and sources page`);
+  }
+
+  const tutorialPages = [
+    'tutorials/what-is-morse-code.html',
+    'tutorials/how-the-telegraph-changed-communication.html',
+  ];
+
+  for (const page of tutorialPages) {
+    assert.match(read(page), /href="\.\.\/research-sources\.html"/, `${page} should link to the public research and sources page`);
+  }
+});

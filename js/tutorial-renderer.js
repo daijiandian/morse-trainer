@@ -17,6 +17,8 @@
       privacyDesc: 'Review how account, cookie, and infrastructure-related data handling works.',
       glossaryTitle: 'Morse Code Glossary',
       glossaryDesc: 'Use a practical reference page for learning terms, on-air shorthand, and equipment vocabulary.',
+      sourcesTitle: 'Research & Sources',
+      sourcesDesc: 'See how history pages, media examples, and public references are researched and corrected.',
       contactTitle: 'Contact',
       contactDesc: 'Use the public support page for corrections, privacy requests, and direct help.',
       footerLine: 'Structured Morse learning platform · Tutorials, practice, and public support pages',
@@ -30,6 +32,7 @@
       footerTerms: 'Terms',
       footerAds: 'Advertising',
       footerEditorial: 'Editorial Policy',
+      footerSources: 'Research & Sources',
       footerHelp: 'Help Center',
       footerFaq: 'FAQ',
       footerContact: 'Contact'
@@ -294,6 +297,7 @@
         ${renderCard({ href: '../editorial-policy.html', title: getUiLabel('footerEditorial', copy.editorialTitle), desc: copy.editorialDesc }).replace('href="../editorial-policy.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../editorial-policy.html' : 'editorial-policy.html') + '"')}
         ${renderCard({ href: '../privacy.html', title: getUiLabel('footerPrivacy', copy.privacyTitle), desc: copy.privacyDesc }).replace('href="../privacy.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../privacy.html' : 'privacy.html') + '"')}
         ${renderCard({ href: '../morse-glossary.html', title: copy.glossaryTitle, desc: copy.glossaryDesc }).replace('href="../morse-glossary.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../morse-glossary.html' : 'morse-glossary.html') + '"')}
+        ${renderCard({ href: '../research-sources.html', title: copy.sourcesTitle || 'Research & Sources', desc: copy.sourcesDesc || 'See how history pages, media examples, and public references are researched and corrected.' }).replace('href="../research-sources.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../research-sources.html' : 'research-sources.html') + '"')}
         ${renderCard({ href: '../contact.html', title: getUiLabel('footerContact', copy.contactTitle), desc: copy.contactDesc }).replace('href="../contact.html"', 'href="' + escapeHtml(document.body.dataset.tutorialPage === 'article' ? '../contact.html' : 'contact.html') + '"')}
       </div>
     `;
@@ -321,6 +325,7 @@
         &middot; <a href="${prefix}terms.html">${escapeHtml(getUiLabel('footerTerms', copy.footerTerms))}</a>
         &middot; <a href="${prefix}advertising.html">${escapeHtml(getUiLabel('footerAds', copy.footerAds))}</a>
         &middot; <a href="${prefix}editorial-policy.html">${escapeHtml(getUiLabel('footerEditorial', copy.footerEditorial))}</a>
+        &middot; <a href="${prefix}research-sources.html">${escapeHtml(copy.footerSources || copy.sourcesTitle || 'Research & Sources')}</a>
         &middot; <a href="${prefix}help.html">${escapeHtml(getUiLabel('footerHelp', copy.footerHelp))}</a>
         &middot; <a href="${prefix}faq.html">${escapeHtml(getUiLabel('footerFaq', copy.footerFaq))}</a>
         &middot; <a href="${prefix}contact.html">${escapeHtml(getUiLabel('footerContact', copy.footerContact))}</a>
