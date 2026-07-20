@@ -30,6 +30,20 @@ function read(url) {
   return fs.readFileSync(url, 'utf8');
 }
 
+const runtimeAllowedPages = new Set([
+  'tutorials.html',
+  'history.html',
+  'practice-guides.html',
+  'morse-glossary.html',
+  'start-here.html',
+  'how-it-works.html',
+  'learning-roadmap.html',
+]);
+
+function allowsDirectAdsenseRuntime(rel) {
+  return rel.startsWith('tutorials/') || runtimeAllowedPages.has(rel);
+}
+
 test('public html pages keep core trust and indexing signals', () => {
   for (const fileUrl of htmlFiles) {
     const rel = path.relative(rootPath, fileURLToPath(fileUrl)).replace(/\\/g, '/');
@@ -83,15 +97,34 @@ test('adsense loader only targets substantive public content pages', () => {
   assert.doesNotMatch(source, /index\.html/);
 });
 
-test('public html pages do not hard-code the external AdSense runtime script', () => {
+test('substantive public content pages hard-code the external AdSense runtime script', () => {
   for (const fileUrl of htmlFiles) {
     const rel = path.relative(rootPath, fileURLToPath(fileUrl)).replace(/\\/g, '/');
+    if (!allowsDirectAdsenseRuntime(rel)) {
+      continue;
+    }
+    const html = read(fileUrl);
+
+    assert.match(
+      html,
+      /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/i,
+      `${rel} should embed the official AdSense runtime on the page itself`,
+    );
+  }
+});
+
+test('homepage and trust pages do not hard-code the external AdSense runtime script', () => {
+  for (const fileUrl of htmlFiles) {
+    const rel = path.relative(rootPath, fileURLToPath(fileUrl)).replace(/\\/g, '/');
+    if (allowsDirectAdsenseRuntime(rel)) {
+      continue;
+    }
     const html = read(fileUrl);
 
     assert.doesNotMatch(
       html,
       /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/i,
-      `${rel} should rely on the central adsense loader instead of a hard-coded runtime script`,
+      `${rel} should stay free of direct AdSense runtime scripts`,
     );
   }
 });
