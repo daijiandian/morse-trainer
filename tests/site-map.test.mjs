@@ -104,6 +104,6 @@ test('sitemap includes research sources and current review-facing lastmod values
   );
   assert.match(
     sitemap,
-    /<loc>https:\/\/www\.mmccode\.com\/research-sources\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+    /<loc>https:\/\/www\.mmccode\.com\/research-sources\.html<\/loc>\s*<lastmod>2026-07-21<\/lastmod>/,
   );
 });

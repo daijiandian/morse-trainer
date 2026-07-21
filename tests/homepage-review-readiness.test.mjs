@@ -20,8 +20,9 @@ test('homepage provides a stronger public review path and product-completeness e
   const words = extractWordCount(home);
 
   assert.ok(words >= 1200, `index.html is too thin at ${words} words`);
-  assert.match(home, /"dateModified": "2026-07-20"/);
-  assert.match(home, /Updated July 20, 2026/);
+  assert.match(home, /"dateModified": "2026-07-21"/);
+  assert.match(home, /Updated July 21, 2026/);
+  assert.match(home, /"availableLanguage": \[\s*"en",\s*"zh-CN",\s*"ja",\s*"ko",\s*"es"\s*\]/);
   assert.match(home, /How to review the site quickly/);
   assert.match(home, /Why this is more than a single drill page/);
   assert.match(home, /Recently updated public resources/);
