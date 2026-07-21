@@ -96,11 +96,11 @@ test('sitemap includes research sources and current review-facing lastmod values
   assert.match(sitemap, /https:\/\/www\.mmccode\.com\/research-sources\.html/);
   assert.match(
     sitemap,
-    /<loc>https:\/\/www\.mmccode\.com\/tutorials\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+    /<loc>https:\/\/www\.mmccode\.com\/tutorials\.html<\/loc>\s*<lastmod>2026-07-21<\/lastmod>/,
   );
   assert.match(
     sitemap,
-    /<loc>https:\/\/www\.mmccode\.com\/history\.html<\/loc>\s*<lastmod>2026-07-20<\/lastmod>/,
+    /<loc>https:\/\/www\.mmccode\.com\/history\.html<\/loc>\s*<lastmod>2026-07-21<\/lastmod>/,
   );
   assert.match(
     sitemap,

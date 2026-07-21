@@ -3,7 +3,7 @@
   if (!data) return;
   const SITE_URL = 'https://www.mmccode.com';
   const SITE_NAME = 'Morse Trainer';
-  const LAST_UPDATED = 'July 20, 2026';
+  const LAST_UPDATED = 'July 21, 2026';
   const TRUST_COPY = {
     en: {
       note: `Last updated: ${LAST_UPDATED}. Maintained as part of the public Morse Trainer tutorial library on mmccode.com.`,
@@ -269,7 +269,18 @@
     return {
       '@type': 'Organization',
       name: SITE_NAME,
-      url: SITE_URL + '/'
+      url: SITE_URL + '/',
+      email: '415417421@qq.com',
+      sameAs: ['https://github.com/daijiandian/morse-trainer'],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: '415417421@qq.com',
+          url: SITE_URL + '/contact.html',
+          availableLanguage: ['en', 'zh-CN', 'ja', 'ko', 'es']
+        }
+      ]
     };
   }
 
@@ -438,7 +449,7 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
-      dateModified: '2026-07-20',
+      dateModified: '2026-07-21',
       author: buildOrganization(),
       publisher: buildOrganization(),
       isPartOf: {
@@ -470,7 +481,7 @@
       description: localized.metaDescription,
       inLanguage: lang,
       url: pageUrl,
-      dateModified: '2026-07-20',
+      dateModified: '2026-07-21',
       mainEntityOfPage: pageUrl,
       author: buildOrganization(),
       publisher: buildOrganization(),

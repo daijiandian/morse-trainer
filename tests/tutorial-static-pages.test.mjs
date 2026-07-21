@@ -25,7 +25,7 @@ test('static tutorial pages expose readable maintenance copy, review notes, and 
 
   for (const file of files) {
     const html = read(file);
-    assert.match(html, /Last updated: July 20, 2026/);
+    assert.match(html, /Last updated: July 21, 2026/);
     assert.match(html, /independently of advertising decisions/i);
     assert.match(html, /How this tutorial content is reviewed/);
     assert.match(html, /manually outlined, checked for factual clarity/i);
@@ -45,7 +45,7 @@ test('tutorial renderer metadata stays aligned with the latest public maintenanc
   const source = read('js/tutorial-renderer.js');
 
   assert.doesNotMatch(source, /dateModified:\s*'2026-07-18'/);
-  assert.match(source, /dateModified:\s*'2026-07-20'/);
+  assert.match(source, /dateModified:\s*'2026-07-21'/);
 });
 
 test('tutorial hubs explain how content is curated and how readers should use the library', () => {
