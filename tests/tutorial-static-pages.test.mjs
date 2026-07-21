@@ -16,19 +16,28 @@ function listTutorialFiles() {
     .map((name) => path.posix.join('tutorials', name));
 }
 
-test('static tutorial pages expose readable maintenance copy and glossary support links', () => {
+function countMatches(input, pattern) {
+  return [...input.matchAll(pattern)].length;
+}
+
+test('static tutorial pages expose readable maintenance copy, review notes, and source links', () => {
   const files = ['history.html', 'tutorials.html', ...listTutorialFiles()];
 
   for (const file of files) {
     const html = read(file);
-    assert.doesNotMatch(html, /Last updated: July \d{1,2}, 2026\s*璺/);
     assert.match(html, /Last updated: July 20, 2026/);
     assert.match(html, /independently of advertising decisions/i);
+    assert.match(html, /How this tutorial content is reviewed/);
+    assert.match(html, /manually outlined, checked for factual clarity/i);
     assert.match(html, /href="[^"]*about\.html"/);
     assert.match(html, /href="[^"]*editorial-policy\.html"/);
     assert.match(html, /href="[^"]*privacy\.html"/);
     assert.match(html, /href="[^"]*morse-glossary\.html"/);
     assert.match(html, /href="[^"]*contact\.html"/);
+    assert.ok(
+      countMatches(html, /href="[^"]*research-sources\.html"/g) >= 2,
+      `${file} should surface research-sources links in both the review/trust body and footer`
+    );
   }
 });
 
@@ -46,7 +55,9 @@ test('tutorial hubs explain how content is curated and how readers should use th
   assert.match(tutorials, /How this library is curated and kept useful/);
   assert.match(tutorials, /How to choose your next article without getting lost/);
   assert.match(tutorials, /not every learner needs every article/i);
+  assert.match(tutorials, /How this tutorial content is reviewed/);
   assert.match(history, /How historical articles are selected and reviewed/);
   assert.match(history, /How to use history pages without leaving the learning path/);
   assert.match(history, /history supports practice when it answers a live learning question/i);
+  assert.match(history, /How this tutorial content is reviewed/);
 });

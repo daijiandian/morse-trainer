@@ -167,6 +167,39 @@
     }
   };
 
+  const REVIEW_COPY = {
+    en: {
+      title: 'How this tutorial content is reviewed',
+      intro: 'Each tutorial or hub page is manually outlined, checked for factual clarity, and revised when training advice, navigation, or historical context needs correction.',
+      purpose: 'These pages are written to answer one learning question or topic cluster in a cleaner format than scattered forum replies, copied snippets, or low-context summaries.',
+      correction: 'If a page becomes unclear or outdated, the public contact and policy pages provide the correction path.'
+    },
+    'zh-CN': {
+      title: '这些教程内容如何审核',
+      intro: '每个教程页或专题页都会经过人工梳理、事实表述检查，并在训练建议、导航结构或历史说明需要修正时更新。',
+      purpose: '这些页面的目标是把一个学习问题或一个主题专题整理清楚，而不是拼接论坛摘录、复制片段或缺少上下文的摘要。',
+      correction: '如果页面内容变得不清楚或已经过时，公开联系页和政策页会提供纠错路径。'
+    },
+    ja: {
+      title: 'このチュートリアル内容の確認方法',
+      intro: '各チュートリアルページやハブページは人の手で構成を整え、事実関係を確認し、練習方針・導線・歴史説明に修正が必要な場合は更新しています。',
+      purpose: 'これらのページは、ひとつの学習課題やトピック群を、断片的な投稿や文脈の薄い要約よりも整理された形で学べるようにまとめています。',
+      correction: '内容が分かりにくくなった場合や古くなった場合は、公開の連絡ページと方針ページから修正依頼ができます。'
+    },
+    ko: {
+      title: '이 튜토리얼 콘텐츠를 검토하는 방식',
+      intro: '각 튜토리얼 페이지와 허브 페이지는 사람이 직접 구조를 다듬고 사실 표현을 점검하며, 학습 조언·탐색 흐름·역사 설명에 수정이 필요하면 업데이트합니다.',
+      purpose: '이 페이지들은 흩어진 포럼 답변, 복사된 조각, 맥락이 부족한 요약을 이어 붙이는 대신 하나의 학습 질문이나 주제 묶음을 더 선명하게 정리하기 위해 작성됩니다.',
+      correction: '내용이 흐려지거나 오래되면 공개 문의 페이지와 정책 페이지를 통해 수정 요청을 보낼 수 있습니다.'
+    },
+    es: {
+      title: 'Cómo se revisa este contenido de tutoriales',
+      intro: 'Cada página de tutorial o página hub se organiza manualmente, se revisa para asegurar claridad factual y se actualiza cuando la orientación de práctica, la navegación o el contexto histórico necesitan corrección.',
+      purpose: 'Estas páginas se escriben para resolver una pregunta de aprendizaje o un grupo temático de forma más clara que respuestas dispersas de foros, fragmentos copiados o resúmenes sin contexto.',
+      correction: 'Si una página se vuelve confusa o queda desactualizada, las páginas públicas de contacto y políticas ofrecen la ruta de corrección.'
+    }
+  };
+
 
   function getLang() {
     return window.MORSE_I18N?.getLanguage?.() || 'en';
@@ -275,6 +308,10 @@
     return TRUST_COPY[lang] || TRUST_COPY.en;
   }
 
+  function getReviewCopy(lang) {
+    return REVIEW_COPY[lang] || REVIEW_COPY.en;
+  }
+
   function getUiLabel(key, fallback) {
     return window.MORSE_I18N?.t?.(key) || fallback;
   }
@@ -289,6 +326,25 @@
       header.appendChild(note);
     }
     note.textContent = getTrustCopy(lang).note;
+  }
+
+  function ensureReviewSection(lang) {
+    const root = document.getElementById('tutorial-content-root');
+    if (!root) return;
+    let section = document.getElementById('tutorial-review-section');
+    if (!section) {
+      section = document.createElement('section');
+      section.id = 'tutorial-review-section';
+      section.className = 'plan-section';
+      root.appendChild(section);
+    }
+    const copy = getReviewCopy(lang);
+    section.innerHTML = `
+      <h3>${escapeHtml(copy.title)}</h3>
+      <p>${escapeHtml(copy.intro)}</p>
+      <p>${escapeHtml(copy.purpose)}</p>
+      <p class="section-desc">${escapeHtml(copy.correction)}</p>
+    `;
   }
 
   function ensureTrustSection(lang) {
@@ -445,6 +501,7 @@
       </section>
     `).join('');
     ensureHeaderNote(lang);
+    ensureReviewSection(lang);
     ensureTrustSection(lang);
     ensureFooter(lang);
   }
@@ -494,6 +551,7 @@
       </section>
     `;
     ensureHeaderNote(lang);
+    ensureReviewSection(lang);
     ensureTrustSection(lang);
     ensureFooter(lang);
   }
